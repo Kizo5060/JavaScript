@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "17 MASYVAI.md",
+                "file": "17_MASYVAI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17 MASYVAI"
+              "title": "17_MASYVAI"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "17 MASYVAI.md",
+                "file": "17_MASYVAI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "17 MASYVAI.md",
+                "file": "17_MASYVAI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "17 MASYVAI.md",
+                "file": "17_MASYVAI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -205,10 +205,11 @@
   },
   "active": "e7e115eeb7747ae6",
   "lastOpenFiles": [
-    "18_NAUDINGI_WEB.md",
-    "14_MOKYMOSI_PLANAS.md",
     "00_START_CIA.md",
+    "17_MASYVAI.md",
+    "14_MOKYMOSI_PLANAS.md",
     "17 MASYVAI.md",
+    "18_NAUDINGI_WEB.md",
     "03_KINTAMIEJI.md",
     "15_MANO_KLAIDOS.md",
     "Untitled"
