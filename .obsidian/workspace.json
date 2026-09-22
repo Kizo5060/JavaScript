@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "19_Pirmadienio_skaidres_apibendrinimas.md",
+                "file": "20 pamoka – JavaScript datos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "19_Pirmadienio_skaidres_apibendrinimas"
+              "title": "20 pamoka – JavaScript datos"
             }
           }
         ],
@@ -205,10 +205,11 @@
   },
   "active": "e7e115eeb7747ae6",
   "lastOpenFiles": [
-    "18_NAUDINGI_WEB.md",
     "19_Pirmadienio_skaidres_apibendrinimas.md",
-    "02_SINTAKSE_IR_USE_STRICT.md",
+    "18_NAUDINGI_WEB.md",
+    "20 pamoka – JavaScript datos.md",
     "01_JS_IVADAS.md",
+    "02_SINTAKSE_IR_USE_STRICT.md",
     "17_MASYVAI.md",
     "00_START_CIA.md",
     "14_MOKYMOSI_PLANAS.md",
