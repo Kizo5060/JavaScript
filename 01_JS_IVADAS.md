@@ -92,3 +92,67 @@ Dažnai `<script>` dedamas prieš `</body>` arba naudojamas `defer`:
 > JavaScript = logika ir elgesys.  
 > HTML = struktūra.  
 > CSS = išvaizda.
+
+---
+
+## Kaip JS failas vykdomas su Node
+
+Turime failą:
+
+```text
+task1.js
+```
+
+Viduje:
+
+```js
+"use strict";
+
+let name = "Jonas";
+
+console.log(name);
+```
+
+Terminale:
+
+```powershell
+node task1.js
+```
+
+Node perskaito failą nuo viršaus į apačią.
+
+Labai supaprastintai:
+
+```text
+1 eilutė → vykdo
+2 eilutė → vykdo
+3 eilutė → vykdo
+...
+```
+
+## Kada reikia HTML?
+
+Jei dirbame tik su logika, pvz.:
+
+```js
+function sum(a, b) {
+    return a + b;
+}
+```
+
+HTML nereikia.
+
+HTML reikia tada, kai JS turi dirbti su puslapio elementais:
+
+```js
+document.querySelector(...)
+```
+
+Taigi kurso užduotims, kurios paleidžiamos terminale:
+
+```text
+.js failas + node
+```
+
+dažniausiai pilnai užtenka.
+

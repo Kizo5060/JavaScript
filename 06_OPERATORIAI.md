@@ -99,3 +99,62 @@ count--;
 ```
 
 Dažnai naudojama cikluose.
+
+---
+
+## Operatoriai užduotyse
+
+Jei užduotis sako:
+
+> Patikrink, ar skaičius lyginis.
+
+Dažnai reikia:
+
+```js
+number % 2 === 0
+```
+
+Jei sako:
+
+> tarp 18 ir 65
+
+galima:
+
+```js
+age >= 18 && age <= 65
+```
+
+Jei sako:
+
+> adminas ARBA savininkas
+
+galima:
+
+```js
+isAdmin || isOwner
+```
+
+## `=` ir `===` nėra tas pats
+
+```js
+=
+```
+
+reiškia **priskirti reikšmę**:
+
+```js
+let x = 5;
+```
+
+```js
+===
+```
+
+reiškia **palyginti**:
+
+```js
+x === 5
+```
+
+Čia viena dažniausių beginner klaidų.
+

@@ -85,3 +85,66 @@ Pvz.:
 „padalink sakinį į žodžius“ → split(" ")
 „patikrink ar yra žodis“ → includes()
 ```
+
+---
+
+## Kaip suprasti metodo iškvietimą
+
+Pvz.:
+
+```js
+text.toUpperCase()
+```
+
+Galima skaityti:
+
+> paimk `text` ir jam pritaikyk `toUpperCase()`.
+
+Pvz.:
+
+```js
+numbers.push(5)
+```
+
+> paimk `numbers` masyvą ir pridėk į jo galą `5`.
+
+## Metodas gali turėti argumentus
+
+```js
+text.includes("Java")
+```
+
+Čia `"Java"` perduodamas metodui kaip argumentas.
+
+```js
+array.slice(1, 3)
+```
+
+Čia metodui perduodami du argumentai:
+- `1` – pradžia;
+- `3` – pabaiga.
+
+## Metodų grandinė
+
+Galima jungti kelis metodus:
+
+```js
+let result = "  LABAS  "
+    .trim()
+    .toLowerCase();
+
+console.log(result); // labas
+```
+
+Skaitome iš viršaus į apačią:
+
+```text
+"  LABAS  "
+↓ trim()
+"LABAS"
+↓ toLowerCase()
+"labas"
+```
+
+Tokios grandinės dažnai pasitaiko string užduotyse.
+

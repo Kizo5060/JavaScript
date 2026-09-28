@@ -166,3 +166,71 @@ getMonth()       mėnuo 0–11
 getDate()        mėnesio diena
 getDay()         savaitės diena
 ```
+
+---
+
+## Datos objekto išskaidymas
+
+Turime:
+
+```js
+let date = new Date("2026-09-24");
+```
+
+Galime atskirai pasiimti:
+
+```js
+let year = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDate();
+```
+
+Svarbiausia nepainioti:
+
+```text
+getMonth() → 0–11
+getDate()  → mėnesio diena
+getDay()   → savaitės diena
+```
+
+## Kodėl datų skirtumas duoda didelį skaičių?
+
+```js
+let difference = date2 - date1;
+```
+
+Gaunamos **milisekundės**.
+
+Todėl:
+
+```text
+1000 ms = 1 sekundė
+60 sekundžių = 1 minutė
+60 minučių = 1 valanda
+24 valandos = 1 diena
+```
+
+Dienoms:
+
+```js
+difference / (1000 * 60 * 60 * 24)
+```
+
+## Dažna klaida su mėnesiu
+
+```js
+new Date(2026, 9, 1)
+```
+
+čia `9` reiškia **spalį**, ne rugsėjį.
+
+Nes:
+
+```text
+0 sausis
+1 vasaris
+...
+8 rugsėjis
+9 spalis
+```
+

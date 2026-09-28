@@ -60,3 +60,56 @@ dažniausiai esi ne tame folderyje arba neteisingai parašei failo vardą.
 - `true / false` – boolean.
 
 > Jei užduoties tekstas atrodo per sudėtingas, pirmiausia persakyk jį savo žodžiais.
+
+---
+
+# Kaip skaityti užduotį
+
+Prieš rašant kodą labai padeda užduotį išsiversti į paprastą kalbą.
+
+Pvz. užduotis:
+
+> Sukurk funkciją, kuri gauna masyvą ir grąžina tik skaičius didesnius už 5.
+
+Išskaidymas:
+
+```text
+gaunu      → masyvą
+turiu eiti → per kiekvieną elementą
+tikrinu    → ar > 5
+saugau     → tinkamus skaičius
+grąžinu    → naują masyvą
+```
+
+Iš to jau matosi reikalingi įrankiai:
+
+```text
+function
+for...of
+if
+push()
+return
+```
+
+## Dažniausi rezultatų kintamieji
+
+Jei turi grąžinti skaičių:
+
+```js
+let result = 0;
+```
+
+Jei turi grąžinti tekstą:
+
+```js
+let result = "";
+```
+
+Jei turi grąžinti masyvą:
+
+```js
+let result = [];
+```
+
+Tai nėra taisyklė visiems atvejams, bet beginner užduotyse labai dažnai padeda pradėti.
+

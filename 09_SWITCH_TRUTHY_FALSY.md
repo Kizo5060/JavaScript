@@ -75,3 +75,57 @@ undefined
 Beginner pradžioje svarbiausia suprasti:
 - `switch` – daug konkrečių variantų;
 - falsy – reikšmės, kurios sąlygoje elgiasi kaip `false`.
+
+---
+
+## Kada `switch`, kada `if`?
+
+`switch` patogus, kai tikriname konkrečias reikšmes:
+
+```js
+switch (month) {
+    case 0:
+        return "Sausis";
+    case 1:
+        return "Vasaris";
+}
+```
+
+`if` patogiau, kai tikriname intervalus:
+
+```js
+if (age >= 18) {
+    ...
+}
+```
+
+arba kelias sąlygas:
+
+```js
+if (age >= 18 && hasTicket) {
+    ...
+}
+```
+
+## Falsy praktiškai
+
+Galima patikrinti, ar string tuščias:
+
+```js
+let text = "";
+
+if (!text) {
+    console.log("Tekstas tuščias");
+}
+```
+
+Bet pradžioje, jei taip aiškiau, visiškai gerai rašyti:
+
+```js
+if (text === "") {
+    console.log("Tekstas tuščias");
+}
+```
+
+Aiškumas mokantis svarbiau už trumpiausią kodą.
+

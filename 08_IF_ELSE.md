@@ -75,3 +75,48 @@ function test() {
     console.log("Šita eilutė nebus vykdoma");
 }
 ```
+
+---
+
+## Sąlygų tvarka svarbi
+
+Pvz.:
+
+```js
+let score = 95;
+
+if (score >= 60) {
+    console.log("Išlaikyta");
+} else if (score >= 90) {
+    console.log("Puikiai");
+}
+```
+
+Čia `95` jau atitinka pirmą sąlygą, todėl iki `>= 90` programa nebeateis.
+
+Geriau:
+
+```js
+if (score >= 90) {
+    console.log("Puikiai");
+} else if (score >= 60) {
+    console.log("Išlaikyta");
+}
+```
+
+Dažnai sąlygas patogu rašyti nuo **griežčiausios / didžiausios** į mažesnę.
+
+## Trumpas variantas be `else`
+
+```js
+function checkAge(age) {
+    if (age >= 18) {
+        return "Pilnametis";
+    }
+
+    return "Nepilnametis";
+}
+```
+
+Kadangi `return` užbaigia funkciją, `else` čia nebūtinas.
+

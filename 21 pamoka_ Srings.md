@@ -287,3 +287,165 @@ trim()          nuima tarpus iš kraštų
 includes()      true / false
 search()        pirmo atitikimo indeksas
 ```
+
+---
+
+# String metodai praktiškai
+
+Turime:
+
+```js
+let text = "  JavaScript yra smagu  ";
+```
+
+## Nuimti tarpus kraštuose
+
+```js
+text.trim();
+```
+
+Rezultatas:
+
+```text
+JavaScript yra smagu
+```
+
+## Patikrinti ar yra žodis
+
+```js
+text.includes("JavaScript");
+```
+
+Rezultatas:
+
+```text
+true
+```
+
+## Paversti į mažąsias
+
+```js
+text.toLowerCase();
+```
+
+Tai ypač naudinga, kai norime tikrinti tekstą nekreipiant dėmesio į didžiąsias raides:
+
+```js
+let normalized = text.toLowerCase();
+
+console.log(normalized.includes("javascript"));
+```
+
+## Žodžiai į masyvą
+
+```js
+let words = text.trim().split(" ");
+```
+
+Rezultatas:
+
+```js
+["JavaScript", "yra", "smagu"]
+```
+
+Dabar su kiekvienu žodžiu galima dirbti atskirai.
+
+## Pirmos kiekvieno žodžio raidės
+
+```js
+let words = "Portable Network Graphics".split(" ");
+let result = "";
+
+for (let word of words) {
+    result += word[0].toUpperCase();
+}
+
+console.log(result); // PNG
+```
+
+Čia vienoje užduotyje susijungia:
+
+```text
+split()       → sakinys į žodžius
+for...of      → einame per žodžius
+word[0]       → pirma raidė
+toUpperCase() → didžioji raidė
+result +=     → kaupiame rezultatą
+```
+
+## Tarpų pašalinimas
+
+```js
+function removeBlanks(text) {
+    return text.replaceAll(" ", "");
+}
+```
+
+Pvz.:
+
+```js
+removeBlanks("Labas Rytas");
+```
+
+Rezultatas:
+
+```text
+LabasRytas
+```
+
+## Simbolių skaičiavimas be tarpų
+
+```js
+function countNonSpaces(text) {
+    let count = 0;
+
+    for (let char of text) {
+        if (char !== " ") {
+            count++;
+        }
+    }
+
+    return count;
+}
+```
+
+Čia svarbus bendras beginner šablonas:
+
+```text
+count = 0
+↓
+ciklas
+↓
+if
+↓
+count++
+↓
+return
+```
+
+## String užduoties pradžios klausimai
+
+Kai gauni string taską:
+
+```text
+1. Ar reikia eiti per visus simbolius?
+   → for...of
+
+2. Ar reikia dirbti su žodžiais?
+   → split(" ")
+
+3. Ar reikia pakeisti tekstą?
+   → replace / replaceAll
+
+4. Ar reikia dalies teksto?
+   → slice / substring
+
+5. Ar reikia patikrinti, ar tekstas egzistuoja?
+   → includes
+
+6. Ar reikia didžiųjų / mažųjų raidžių?
+   → toUpperCase / toLowerCase
+```
+
+Tai padeda bent suprasti, nuo ko pradėti.
+

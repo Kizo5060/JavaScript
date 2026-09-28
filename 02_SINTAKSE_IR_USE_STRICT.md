@@ -99,3 +99,64 @@ let text = "Labas;
 3. Ar string turi abi kabutes?
 4. Ar kintamojo vardas visur parašytas vienodai?
 5. Ar metodas parašytas be typo? Pvz. `toUpperCase()`.
+
+---
+
+## Sintaksė paprastai
+
+JavaScript labai jautrus smulkioms rašymo klaidoms.
+
+Pvz. šie metodai nėra tas pats:
+
+```js
+toUpperCase()
+touppercase()
+toUperCase()
+```
+
+Teisingas tik:
+
+```js
+toUpperCase()
+```
+
+Tas pats galioja kintamųjų vardams:
+
+```js
+let userName = "Jonas";
+
+console.log(username); // klaida
+```
+
+Nes `userName` ir `username` yra skirtingi vardai.
+
+## Kodo blokas
+
+Kai matai:
+
+```js
+if (...) {
+
+}
+```
+
+arba:
+
+```js
+function test() {
+
+}
+```
+
+viskas tarp `{ }` priklauso tam blokui.
+
+Todėl labai svarbu tvarkingai lygiuoti kodą:
+
+```js
+if (age >= 18) {
+    console.log("Pilnametis");
+}
+```
+
+Taip daug lengviau pastebėti trūkstamą skliaustą.
+

@@ -136,3 +136,23 @@ for (let char of text) {
 
 return result;
 ```
+
+---
+
+# Kaip atpažinti užduoties tipą
+
+```text
+„patikrink ar...“            → if
+„kiek yra...“                → count = 0
+„suskaičiuok sumą“           → sum = 0
+„kiekvienam elementui“       → for / for...of
+„atrink tik...“              → filter arba ciklas + push
+„pakeisk kiekvieną...“       → map
+„rask pirmą...“              → find
+„padalink tekstą į žodžius“  → split(" ")
+„sujunk masyvą į tekstą“     → join(...)
+„pašalink tarpus“            → trim() arba replaceAll()
+„ar tekstas turi...“         → includes()
+„pirma / paskutinė raidė“    → [0] / [length - 1]
+```
+

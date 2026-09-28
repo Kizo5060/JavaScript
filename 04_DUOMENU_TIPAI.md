@@ -128,3 +128,100 @@ Tačiau `+` gali jungti tekstą:
 ```
 
 Todėl su `+` reikia būti ypač atsargiam.
+
+---
+
+## Kodėl duomenų tipai svarbūs?
+
+Šitie du dalykai atrodo panašiai:
+
+```js
+5
+"5"
+```
+
+Bet pirmas yra:
+
+```text
+number
+```
+
+o antras:
+
+```text
+string
+```
+
+Todėl:
+
+```js
+5 + 2
+```
+
+duoda:
+
+```text
+7
+```
+
+o:
+
+```js
+"5" + 2
+```
+
+duoda:
+
+```text
+"52"
+```
+
+## `Number()` ir `parseInt()`
+
+```js
+Number("123");       // 123
+parseInt("123");     // 123
+```
+
+Bet:
+
+```js
+Number("123px");     // NaN
+parseInt("123px");   // 123
+```
+
+Paprastai:
+- `Number()` tikisi, kad visas tekstas yra skaičius;
+- `parseInt()` gali paimti sveiką skaičių nuo string pradžios.
+
+## Boolean konversija
+
+Dažni falsy:
+
+```js
+Boolean(0);         // false
+Boolean("");        // false
+Boolean(null);      // false
+Boolean(undefined); // false
+Boolean(NaN);       // false
+```
+
+Dažni truthy:
+
+```js
+Boolean(1);       // true
+Boolean("Labas"); // true
+Boolean([]);      // true
+Boolean({});      // true
+```
+
+## Greitas klausimas sau
+
+Kai rezultatas keistas, patikrink:
+
+```js
+console.log(typeof value);
+```
+
+Tai dažnai iškart parodo, kodėl programa elgiasi ne taip, kaip tikėjaisi.
+

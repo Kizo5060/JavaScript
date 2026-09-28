@@ -97,3 +97,61 @@ Paprasta taisyklė:
 reikšmė keisis → let
 reikšmė neturėtų būti perrašoma → const
 ```
+
+---
+
+## Deklaravimas ir priskyrimas nėra tas pats
+
+Deklaruojame:
+
+```js
+let age;
+```
+
+Priskiriame reikšmę:
+
+```js
+age = 28;
+```
+
+Galima ir iškart:
+
+```js
+let age = 28;
+```
+
+## Reikšmės keitimas
+
+```js
+let score = 10;
+
+score = 20;
+```
+
+Čia antro `let` nebereikia.
+
+Blogai:
+
+```js
+let score = 10;
+let score = 20;
+```
+
+## Kodėl svarbūs geri vardai?
+
+Blogiau:
+
+```js
+let x = 5;
+let y = 10;
+```
+
+Aiškiau:
+
+```js
+let price = 5;
+let quantity = 10;
+```
+
+Kuo aiškesni vardai, tuo lengviau suprasti užduotį ir rasti klaidą.
+

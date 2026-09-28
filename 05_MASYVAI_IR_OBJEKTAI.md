@@ -92,3 +92,73 @@ Mąstymas:
 users[0]      → pirmas objektas
 users[0].name → jo name reikšmė
 ```
+
+---
+
+## Masyvo ilgis
+
+```js
+let colors = ["red", "green", "blue"];
+
+console.log(colors.length); // 3
+```
+
+Paskutinis indeksas visada:
+
+```js
+colors.length - 1
+```
+
+Todėl paskutinis elementas:
+
+```js
+colors[colors.length - 1];
+```
+
+## Elemento keitimas
+
+Masyvo elementą galima pakeisti:
+
+```js
+let colors = ["red", "green"];
+
+colors[0] = "blue";
+
+console.log(colors);
+```
+
+## Objekto reikšmės keitimas
+
+```js
+let user = {
+    name: "Jonas",
+    age: 20
+};
+
+user.age = 21;
+```
+
+## Dot notation ir bracket notation
+
+Dažniausiai:
+
+```js
+user.name
+```
+
+Bet galima ir:
+
+```js
+user["name"]
+```
+
+`for...in` cikle bracket notation labai naudinga:
+
+```js
+for (let key in user) {
+    console.log(user[key]);
+}
+```
+
+Nes `key` kiekvieną kartą yra kitas objekto rakto vardas.
+
