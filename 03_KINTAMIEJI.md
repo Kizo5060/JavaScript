@@ -1,64 +1,99 @@
-# Kintamieji
+# 03 – Kintamieji
 
-#js #kintamieji
+## Kas yra kintamasis?
 
-Kintamasis = vieta duomenims saugoti.
-
-## `let`
-Naudok, kai reikšmė gali keistis.
+Kintamasis – vardu pažymėta vieta reikšmei saugoti.
 
 ```js
-let age = 18;
-age = 19;
+let age = 28;
+```
+
+- `let` – deklaravimo žodis;
+- `age` – kintamojo vardas;
+- `28` – reikšmė.
+
+## `let`
+
+Naudojame, kai reikšmė vėliau gali keistis.
+
+```js
+let score = 10;
+score = 15;
+```
+
+Tame pačiame scope negalima iš naujo deklaruoti tuo pačiu `let` vardu:
+
+```js
+let score = 10;
+// let score = 20; // klaida
 ```
 
 ## `const`
-Naudok, kai kintamojo nenori perrašyti.
+
+Naudojame, kai kintamojo nenorime perrašyti.
 
 ```js
-const name = "Jonas";
+const PI = 3.14;
+```
+
+Blogai:
+
+```js
+const PI = 3.14;
+PI = 4;
 ```
 
 ## `var`
-Senas deklaravimo būdas. Pradžioje jo geriau nenaudoti.
 
-## Gera taisyklė
-Jei nežinai ką rinktis:
-- pradėk nuo `const`;
-- jei reikšmę reikės pakeisti → `let`.
-
-## Vardai
-
-Gerai:
+Senas deklaravimo būdas.
 
 ```js
-let userAge = 20;
-let firstName = "Jonas";
+var name = "Jonas";
 ```
 
-Blogiau:
+Kurso medžiagoje akcentuojama, kad geriau rinktis `let` ir `const`, nes `var` turi kitokį scope ir gali sukelti painiavą.
+
+## Scope
+
+Kintamasis gali galioti tik tam tikrame bloke.
 
 ```js
-let x = 20;
+if (true) {
+    let message = "Labas";
+}
+
+// console.log(message); // neveiks
 ```
 
-Jei pavadinimas iš kelių žodžių, naudok `camelCase`.
+## Kintamųjų vardai
 
-## Mini pavyzdys
+Galima:
 
 ```js
-let money = 20;
-money = money + 5;
-
-console.log(money);
+let userName;
+let age2;
+let _value;
+let $price;
 ```
 
-Rezultatas:
+Negalima pradėti skaičiumi:
+
+```js
+// let 2age;
+```
+
+Kelių žodžių vardams naudojamas `camelCase`:
+
+```js
+let firstName;
+let totalPrice;
+```
+
+## Kada `let`, kada `const`?
+
+Paprasta taisyklė:
 
 ```text
-25
+reikšmė keisis → let
+reikšmė neturėtų būti perrašoma → const
 ```
-
-Susiję:
-- [[04_DUOMENU_TIPAI]]
-- [[06_OPERATORIAI]]

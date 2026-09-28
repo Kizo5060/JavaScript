@@ -1,79 +1,101 @@
-# Operatoriai
+# 06 – Operatoriai
 
-#js #operatoriai
-
-## Matematiniai
+## Aritmetiniai operatoriai
 
 ```js
-+   // sudėtis
--   // atimtis
-*   // daugyba
-/   // dalyba
-%   // liekana
++   sudėtis
+-   atimtis
+*   daugyba
+/   dalyba
+%   liekana
+**  kėlimas laipsniu
 ```
 
-Pavyzdys:
+Pvz.:
 
 ```js
-let result = 10 + 5;
-console.log(result);
+10 % 2 // 0
 ```
 
-## Palyginimo
+Todėl `%` dažnai naudojamas tikrinant lyginį skaičių:
 
 ```js
->    // daugiau
-<    // mažiau
->=   // daugiau arba lygu
-<=   // mažiau arba lygu
-===  // lygu
-!==  // nelygu
-```
-
-Pavyzdys:
-
-```js
-let age = 20;
-
-console.log(age >= 18);
-```
-
-Rezultatas:
-
-```text
-true
-```
-
-## Loginiai
-
-```js
-&&   // IR
-||   // ARBA
-!    // NE
-```
-
-Pavyzdys:
-
-```js
-let age = 20;
-let hasLicense = true;
-
-if (age >= 18 && hasLicense) {
-    console.log("Gali vairuoti");
+if (number % 2 === 0) {
+    console.log("Lyginis");
 }
+```
+
+## Priskyrimo operatoriai
+
+```js
+let x = 5;
+
+x += 2; // x = x + 2
+x -= 2;
+x *= 2;
+x /= 2;
+```
+
+## Palyginimo operatoriai
+
+```js
+>    daugiau
+<    mažiau
+>=   daugiau arba lygu
+<=   mažiau arba lygu
+===  griežtai lygu
+!==  griežtai nelygu
+```
+
+Pvz.:
+
+```js
+5 === 5   // true
+5 === "5" // false
+```
+
+## `==` ir `===`
+
+Beginner lygyje saugiausia įprasti naudoti:
+
+```js
+===
+```
+
+Nes jis tikrina ir reikšmę, ir tipą.
+
+## Loginiai operatoriai
+
+### AND `&&`
+
+Abi sąlygos turi būti `true`.
+
+```js
+age >= 18 && hasTicket
+```
+
+### OR `||`
+
+Užtenka bent vienos `true`.
+
+```js
+isAdmin || isOwner
+```
+
+### NOT `!`
+
+Apverčia boolean reikšmę:
+
+```js
+!true  // false
+!false // true
 ```
 
 ## `++` ir `--`
 
 ```js
-let x = 1;
-
-x++;
-x--;
+count++;
+count--;
 ```
 
 Dažnai naudojama cikluose.
-
-Susiję:
-- [[08_IF_ELSE]]
-- [[11_CIKLAI]]

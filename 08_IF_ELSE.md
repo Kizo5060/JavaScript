@@ -1,68 +1,77 @@
-# IF / ELSE
+# 08 – `if / else`
 
-#js #if #salygos
+`if` naudojame tada, kai programa turi **priimti sprendimą**.
 
-## Kas tai?
-`if` = **jeigu**.
+## Paprastas `if`
 
 ```js
-if (salyga) {
-    // vykdyk šitą kodą
+let age = 20;
+
+if (age >= 18) {
+    console.log("Pilnametis");
 }
 ```
+
+Skaitome:
+
+> JEIGU `age >= 18`, vykdyk kodą `{ }`.
 
 ## `if / else`
 
 ```js
-let age = 16;
-
 if (age >= 18) {
-    console.log("Galima vairuoti");
+    console.log("Pilnametis");
 } else {
-    console.log("Negalima vairuoti");
+    console.log("Nepilnametis");
 }
 ```
 
-Programa tikrina:
-
-```text
-16 >= 18 → false
-```
-
-Todėl vykdo `else`.
+`else` vykdomas, kai `if` sąlyga yra `false`.
 
 ## `else if`
 
 ```js
-let age = 15;
+let score = 75;
 
-if (age < 13) {
-    console.log("Vaikas");
-} else if (age < 18) {
-    console.log("Paauglys");
+if (score >= 90) {
+    console.log("Labai gerai");
+} else if (score >= 60) {
+    console.log("Gerai");
 } else {
-    console.log("Suaugęs");
+    console.log("Reikia pasimokyti");
 }
 ```
 
-Programa tikrina sąlygas iš viršaus į apačią.
+## Kaip atpažinti užduotyje?
 
-## Kaip galvoti
-1. Ką tikrinu?
-2. Kokia sąlyga?
-3. Ką daryti jei `true`?
-4. Ką daryti jei `false`?
+Jei užduotyje matai:
+- „jeigu“;
+- „kitu atveju“;
+- „patikrink ar“;
+- „jei daugiau nei...“
 
-## Mini užduotis sau
+greičiausiai reikia `if`.
+
+## Pavyzdys funkcijoje
 
 ```js
-let temperature = 25;
+function checkNumber(number) {
+    if (number > 10) {
+        return "Daugiau už 10";
+    }
+
+    return "10 arba mažiau";
+}
 ```
 
-Padaryk:
-- `>= 20` → `"Šilta"`
-- kitu atveju → `"Šalta"`
+## Svarbu apie `return`
 
-Susiję:
-- [[06_OPERATORIAI]]
-- [[09_SWITCH_TRUTHY_FALSY]]
+Kai funkcija pasiekia `return`, ji baigia darbą.
+
+```js
+function test() {
+    return 5;
+
+    console.log("Šita eilutė nebus vykdoma");
+}
+```

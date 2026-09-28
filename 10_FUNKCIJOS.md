@@ -1,13 +1,8 @@
-# Funkcijos
-
-#js #funkcijos
+# 10 – Funkcijos
 
 ## Kas yra funkcija?
-Funkcija = kodo blokas, kurį galima iškviesti kada reikia.
 
-Vieną kartą parašai → gali naudoti daug kartų.
-
-## Function declaration
+Funkcija – kodo blokas, kuris suveikia tik tada, kai jį iškviečiame.
 
 ```js
 function sayHello() {
@@ -17,20 +12,28 @@ function sayHello() {
 sayHello();
 ```
 
+Kodėl jos naudingos?
+
+> Tą patį kodą parašome vieną kartą, o vykdyti galime daug kartų.
+
 ## Parametrai
 
 ```js
 function greet(name) {
-    console.log(`Labas, ${name}`);
+    console.log("Labas " + name);
 }
 
 greet("Jonas");
+greet("Petras");
 ```
 
-`name` yra parametras.
+`name` – parametras.
+
+`"Jonas"` – argumentas, kurį perduodame iškvietimo metu.
 
 ## `return`
-`return` grąžina rezultatą iš funkcijos.
+
+`return` grąžina funkcijos rezultatą.
 
 ```js
 function sum(a, b) {
@@ -39,13 +42,29 @@ function sum(a, b) {
 
 let result = sum(5, 3);
 
-console.log(result);
+console.log(result); // 8
 ```
 
-Rezultatas:
+Svarbu:
 
-```text
-8
+```js
+console.log()
+```
+
+tik parodo reikšmę.
+
+```js
+return
+```
+
+grąžina reikšmę iš funkcijos.
+
+## Function declaration
+
+```js
+function sum(a, b) {
+    return a + b;
+}
 ```
 
 ## Function expression
@@ -64,28 +83,56 @@ const sum = (a, b) => {
 };
 ```
 
-Trumpai:
+Trumpas variantas:
 
 ```js
 const sum = (a, b) => a + b;
 ```
 
-## Svarbiausia pradžioje
-Tau dabar svarbiausia suprasti:
-- funkcija pati nesuveikia, kol jos neiškvieti;
-- parametrai leidžia perduoti duomenis;
-- `return` grąžina rezultatą.
+## Callback
 
-## Pažangesnės temos iš skaidrių
-Skaidrėse dar yra:
-- callback funkcijos;
-- higher-order functions;
-- asinchroniniai callback;
-- recursive funkcijos;
-- nested funkcijos.
+Callback – funkcija, perduodama kitai funkcijai.
 
-Kol bazinės funkcijos neaiškios, šitų dar nereikia kalti.
+```js
+let numbers = [1, 2, 3, 4];
 
-Susiję:
-- [[11_CIKLAI]]
-- [[12_METODAI]]
+let even = numbers.filter(function(number) {
+    return number % 2 === 0;
+});
+```
+
+`filter()` gauna funkciją, kuri nusprendžia, kas tinka.
+
+## Metodas ir funkcija
+
+Funkcija:
+
+```js
+sum(2, 3);
+```
+
+Metodas kviečiamas su tašku:
+
+```js
+text.toUpperCase();
+```
+
+## Kaip pradėti funkcijos užduotį?
+
+Jei užduotis sako:
+
+> Sukurk funkciją, kuri gauna tekstą ir grąžina jo ilgį.
+
+Pradžia:
+
+```js
+function getLength(text) {
+
+}
+```
+
+Tada klausi:
+1. ką gaunu? → `text`
+2. ko reikia? → ilgio
+3. kuo randamas ilgis? → `.length`
+4. ką grąžinti? → `return`

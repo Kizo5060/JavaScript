@@ -1,27 +1,27 @@
-# Greita atmintinė
-
-#js #cheatsheet
+# 13 – Greita atmintinė
 
 ## Kintamieji
 
 ```js
-let age = 20;
+let x = 5;
 const name = "Jonas";
 ```
 
-## Išvedimas
+## Tipai
 
 ```js
-console.log("Labas");
+typeof 5        // number
+typeof "Labas"  // string
+typeof true     // boolean
 ```
 
-## IF
+## Sąlyga
 
 ```js
-if (age >= 18) {
-    console.log("Suaugęs");
+if (x > 5) {
+
 } else {
-    console.log("Nepilnametis");
+
 }
 ```
 
@@ -33,59 +33,106 @@ function sum(a, b) {
 }
 ```
 
-## Arrow function
-
-```js
-const sum = (a, b) => a + b;
-```
-
-## FOR
+## `for`
 
 ```js
 for (let i = 0; i < 5; i++) {
-    console.log(i);
+
 }
 ```
 
-## WHILE
+## `for...of`
 
 ```js
-let i = 0;
+for (let item of array) {
 
-while (i < 5) {
-    console.log(i);
-    i++;
 }
 ```
 
-## Array
+## Masyvas
 
 ```js
-let items = ["a", "b", "c"];
-console.log(items[0]);
+let arr = [1, 2, 3];
+
+arr[0];
+arr.length;
+arr.push(4);
 ```
 
-## Object
+## Objektas
 
 ```js
 let user = {
     name: "Jonas",
-    age: 20
+    age: 28
 };
 
-console.log(user.name);
+user.name;
 ```
 
-## Patikrinimai
+## String
 
 ```js
-===   // lygu
-!==   // nelygu
->     // daugiau
-<     // mažiau
->=    // daugiau arba lygu
-<=    // mažiau arba lygu
-&&    // IR
-||    // ARBA
-!     // NE
+text.length
+text[0]
+text.toUpperCase()
+text.toLowerCase()
+text.trim()
+text.split(" ")
+text.includes("abc")
+text.replaceAll(" ", "")
+```
+
+## Dažna užduoties logika
+
+### Skaičiuoti
+
+```js
+let count = 0;
+
+for (let item of items) {
+    if (/* sąlyga */) {
+        count++;
+    }
+}
+
+return count;
+```
+
+### Kaupti sumą
+
+```js
+let sum = 0;
+
+for (let number of numbers) {
+    sum += number;
+}
+
+return sum;
+```
+
+### Kurti naują masyvą
+
+```js
+let result = [];
+
+for (let item of items) {
+    if (/* sąlyga */) {
+        result.push(item);
+    }
+}
+
+return result;
+```
+
+### Kurti naują string
+
+```js
+let result = "";
+
+for (let char of text) {
+    result += char;
+}
+
+return result;
 ```

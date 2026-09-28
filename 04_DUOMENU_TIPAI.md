@@ -1,71 +1,130 @@
-# Duomenų tipai
+# 04 – Duomenų tipai
 
-#js #tipai
-
-## Number
-Skaičiai:
+JavaScript yra dinamiškai tipizuota kalba – kintamajam tipas nėra „prikalamas“ visam laikui.
 
 ```js
-let age = 20;
-let price = 10.99;
+let value = 10;
+value = "Labas";
 ```
 
-## String
+## Pagrindiniai tipai
+
+### Number
+
+```js
+let age = 28;
+let price = 12.50;
+```
+
+Prie `number` temos sutinkame:
+- `Infinity`
+- `NaN` – „Not a Number“
+
+```js
+console.log("abc" * 2); // NaN
+```
+
+### String
+
 Tekstas:
 
 ```js
 let name = "Jonas";
-let city = 'Kaunas';
+let city = 'Vilnius';
+let message = `Labas`;
 ```
 
-## Boolean
+### Boolean
+
 Tik dvi reikšmės:
 
 ```js
-let isOnline = true;
-let isAdmin = false;
+true
+false
 ```
 
-## `null`
-Reikšmė sąmoningai yra „tuščia“ / nežinoma.
+### `null`
+
+Specialiai priskirta „tuščia / nėra reikšmės“ reikšmė.
 
 ```js
-let selectedUser = null;
+let user = null;
 ```
 
-## `undefined`
-Kintamasis yra, bet reikšmė dar nepriskirta.
+### `undefined`
+
+Kintamasis sukurtas, bet reikšmė nepriskirta.
 
 ```js
 let result;
+console.log(result); // undefined
 ```
 
-## `NaN`
-Reiškia „Not a Number“.
+### BigInt
+
+Labai dideliems sveikiesiems skaičiams.
+
+```js
+let huge = 12345678901234567890n;
+```
 
 ## `typeof`
-Patikrinti tipą:
+
+Parodo reikšmės tipą:
 
 ```js
-let age = 20;
-
-console.log(typeof age);
+console.log(typeof 10);       // number
+console.log(typeof "Labas");  // string
+console.log(typeof true);     // boolean
 ```
 
-Rezultatas:
-
-```text
-number
-```
-
-## String su backticks
+Galimi abu variantai:
 
 ```js
-let name = "Jonas";
-
-console.log(`Labas, ${name}`);
+typeof x;
+typeof(x);
 ```
 
-Susiję:
-- [[05_MASYVAI_IR_OBJEKTAI]]
-- [[06_OPERATORIAI]]
+## Tipų keitimas
+
+### Į Number
+
+```js
+Number("123");   // 123
+parseInt("123"); // 123
+```
+
+`parseInt()` gali nuskaityti skaičių nuo string pradžios:
+
+```js
+parseInt("123px"); // 123
+```
+
+### Į String
+
+```js
+String(123); // "123"
+```
+
+### Į Boolean
+
+```js
+Boolean(1);  // true
+Boolean(0);  // false
+```
+
+## Automatinis keitimas
+
+```js
+"6" / "2" // 3
+```
+
+Matematiniai operatoriai dažnai konvertuoja string į number.
+
+Tačiau `+` gali jungti tekstą:
+
+```js
+"6" + "2" // "62"
+```
+
+Todėl su `+` reikia būti ypač atsargiam.

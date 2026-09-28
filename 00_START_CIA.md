@@ -1,34 +1,62 @@
-# JavaScript — pradėk čia
+# START ČIA – JavaScript nuo nulio
 
-#js #mokymasis
+Šis aplankas skirtas žmogui, kuris pradeda beveik nuo 0.
 
-Šitas vault'as padarytas taip, kad nereikėtų mokytis iš 100 skaidrių iš karto.
+## Kaip mokytis
 
-## Kaip naudoti
-1. Eik temomis iš eilės.
-2. Perskaityk trumpą paaiškinimą.
-3. Nukopijuok pavyzdį į savo `.js` failą.
-4. Pakeisk skaičius / tekstą ir pažiūrėk, kas nutinka.
-5. Tik tada eik į kitą temą.
+Nereikia bandyti iškalti viso JavaScript. Svarbiau suprasti pasikartojančią logiką:
 
-## Temos
-- [[01_JS_IVADAS]]
-- [[02_SINTAKSE_IR_USE_STRICT]]
-- [[03_KINTAMIEJI]]
-- [[04_DUOMENU_TIPAI]]
-- [[05_MASYVAI_IR_OBJEKTAI]]
-- [[06_OPERATORIAI]]
-- [[07_IVESTIS_IR_ISVESTIS]]
-- [[08_IF_ELSE]]
-- [[09_SWITCH_TRUTHY_FALSY]]
-- [[10_FUNKCIJOS]]
-- [[11_CIKLAI]]
-- [[12_METODAI]]
-- [[13_GREITA_ATMINTINE]]
-- [[14_MOKYMOSI_PLANAS]]
-- [[15_MANO_KLAIDOS]]
+1. **Ką gaunu?** – skaičių, tekstą, masyvą?
+2. **Ką turiu padaryti?** – patikrinti, suskaičiuoti, pakeisti, atrinkti?
+3. **Ką turiu grąžinti?** – skaičių, tekstą, `true/false`, masyvą?
+4. Ar reikia:
+   - `if` – kai yra sąlyga;
+   - ciklo – kai veiksmą kartojame;
+   - funkcijos – kai norime kodą panaudoti dar kartą;
+   - masyvo metodo – kai dirbame su daug reikšmių.
 
-## Mano rekomenduojama tvarka
-[[03_KINTAMIEJI]] → [[04_DUOMENU_TIPAI]] → [[06_OPERATORIAI]] → [[08_IF_ELSE]] → [[09_SWITCH_TRUTHY_FALSY]] → [[10_FUNKCIJOS]] → [[11_CIKLAI]]
+## Minimalus darbo šablonas
 
-> Svarbiausia: nebandyk visko iškalti. Tikslas — suprasti, ką kodas daro.
+```js
+"use strict";
+
+function task(value) {
+    let result = value;
+
+    return result;
+}
+
+console.log(task("test"));
+```
+
+## Kaip paleisti `.js` failą
+
+Terminalas turi būti tame pačiame kataloge kaip failas.
+
+```powershell
+node task1.js
+```
+
+Jei matai:
+
+```text
+Cannot find module ...
+```
+
+dažniausiai esi ne tame folderyje arba neteisingai parašei failo vardą.
+
+## Svarbiausia pradžiai
+
+- `let` – reikšmę galime pakeisti.
+- `const` – kintamojo negalime perrašyti.
+- `if` – sprendimas pagal sąlygą.
+- `function` – pakartotinai naudojamas kodo blokas.
+- `return` – funkcijos rezultatas.
+- `for` / `for...of` – kartojimas.
+- `[]` – masyvas.
+- `{}` – objektas.
+- `"tekstas"` – string.
+- `123` – number.
+- `true / false` – boolean.
+
+> Jei užduoties tekstas atrodo per sudėtingas, pirmiausia persakyk jį savo žodžiais.

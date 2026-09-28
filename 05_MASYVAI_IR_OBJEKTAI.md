@@ -1,48 +1,94 @@
-# Masyvai ir objektai
+# 05 – Masyvai ir objektai
 
-#js #array #object
+## Masyvas (`Array`)
 
-## Array — masyvas
-Viename kintamajame laikome kelias reikšmes.
-
-```js
-let cars = ["BMW", "Audi", "Volvo"];
-```
-
-Elementai numeruojami nuo **0**:
+Masyvas leidžia viename kintamajame laikyti daug reikšmių.
 
 ```js
-console.log(cars[0]);
+let cars = ["Saab", "Volvo", "BMW"];
 ```
 
-Rezultatas:
+Masyvo indeksai prasideda nuo `0`:
 
 ```text
-BMW
+Saab   Volvo   BMW
+ 0       1      2
 ```
 
-## Object — objektas
-Objektas saugo reikšmes pagal `key: value`.
+```js
+console.log(cars[0]); // Saab
+```
+
+Masyve gali būti ir skirtingų tipų reikšmių:
+
+```js
+let person = ["John", "Doe", 46];
+```
+
+## Objektas (`Object`)
+
+Objektas saugo reikšmes `key: value` principu.
 
 ```js
 let person = {
-    firstName: "Jonas",
-    age: 20
+    firstName: "John",
+    lastName: "Doe",
+    age: 46
 };
 ```
 
-Gauti reikšmę:
+- `firstName` – key;
+- `"John"` – value.
+
+Reikšmę pasiekiame:
 
 ```js
 console.log(person.firstName);
 ```
 
-## Paprasta atmintinė
-- `[]` → masyvas;
-- `{}` → objektas;
-- masyve dažniausiai imi pagal indeksą;
-- objekte imi pagal pavadinimą.
+## Masyvas vs objektas
 
-Susiję:
-- [[11_CIKLAI]]
-- [[12_METODAI]]
+Masyvas:
+
+```js
+let colors = ["red", "green", "blue"];
+```
+
+Reikšmę randame pagal **indeksą**:
+
+```js
+colors[1];
+```
+
+Objektas:
+
+```js
+let user = {
+    name: "Jonas",
+    age: 28
+};
+```
+
+Reikšmę randame pagal **rakto vardą**:
+
+```js
+user.name;
+```
+
+## Masyve gali būti objektai
+
+```js
+let users = [
+    { name: "Jonas", age: 20 },
+    { name: "Petras", age: 25 }
+];
+
+console.log(users[0].name);
+```
+
+Mąstymas:
+
+```text
+users[0]      → pirmas objektas
+users[0].name → jo name reikšmė
+```

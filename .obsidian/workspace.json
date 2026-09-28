@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "21 pamoka_ Srings.md",
+                "file": "03_KINTAMIEJI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "21 pamoka_ Srings"
+              "title": "03_KINTAMIEJI"
             }
           }
         ]
@@ -190,12 +190,15 @@
   },
   "active": "e7e115eeb7747ae6",
   "lastOpenFiles": [
-    "03_KINTAMIEJI.md",
     "02_SINTAKSE_IR_USE_STRICT.md",
+    "01_JS_IVADAS.md",
+    "03_KINTAMIEJI.md",
+    "19 Pirmadienio skaidres apibendrinimas.md",
+    "21 pamoka_ Srings.md",
+    "11_CIKLAI.md",
     "20 pamoka – JavaScript datos.md",
     "19_Pirmadienio_skaidres_apibendrinimas.md",
     "18_NAUDINGI_WEB.md",
-    "01_JS_IVADAS.md",
     "17_MASYVAI.md",
     "00_START_CIA.md",
     "14_MOKYMOSI_PLANAS.md",

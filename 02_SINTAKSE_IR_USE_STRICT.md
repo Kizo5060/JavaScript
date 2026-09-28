@@ -1,55 +1,101 @@
-# Sintaksė ir `use strict`
+# 02 – Sintaksė ir `use strict`
 
-#js #pagrindai
+## JavaScript sakiniai
 
-## Sakiniai
-JavaScript kodas susideda iš sakinių.
+JavaScript kodas sudarytas iš sakinių:
 
 ```js
-let age = 18;
-console.log(age);
+let name = "Jonas";
+console.log(name);
 ```
 
-Kabliataškis `;` rekomenduojamas, nors dažnai nėra privalomas.
+Kabliataškis `;` dažnai rekomenduojamas, nors daugeliu atvejų JS gali veikti ir be jo.
 
 ## Komentarai
 
-```js
-// vienos eilutės komentaras
+Vienos eilutės:
 
+```js
+// čia komentaras
+```
+
+Kelių eilučių:
+
+```js
 /*
-kelių
-eilučių
+čia
+kelių eilučių
 komentaras
 */
 ```
 
-## Case sensitive
-JavaScript skiria didžiąsias ir mažąsias raides.
+## JavaScript yra case-sensitive
+
+Šitie vardai yra skirtingi:
 
 ```js
-let age = 18;
-let Age = 20;
+let name = "Jonas";
+let Name = "Petras";
 ```
 
-Čia yra **du skirtingi kintamieji**.
+## `"use strict"`
 
-## `use strict`
-
-Failo pradžioje:
+Kurso skaidrėse rekomenduojama `.js` failo pradžioje rašyti:
 
 ```js
 "use strict";
 ```
 
-Tai griežtesnis JavaScript režimas ir padeda greičiau pastebėti klaidas.
+Tai įjungia griežtesnį JavaScript režimą ir padeda greičiau pamatyti kai kurias klaidas.
 
-## Ką verta atsiminti
-- rašyk aiškius vardus;
-- laikyk kodą tvarkingai;
-- naudok įtraukas;
-- pradžioje geriau naudok `let` ir `const`, o ne `var`.
+Pvz. blogai:
 
-Susiję:
-- [[03_KINTAMIEJI]]
-- [[15_MANO_KLAIDOS]]
+```js
+"use strict";
+
+age = 25;
+```
+
+Nes `age` nebuvo deklaruotas.
+
+Gerai:
+
+```js
+"use strict";
+
+let age = 25;
+```
+
+## Dažna beginner klaida – skliaustai
+
+Funkcijos blokas:
+
+```js
+function hello() {
+    console.log("Labas");
+}
+```
+
+`{` atidaro bloką, `}` uždaro.
+
+## Dažna beginner klaida – kabutės
+
+Teisingai:
+
+```js
+let text = "Labas";
+```
+
+Neteisingai:
+
+```js
+let text = "Labas;
+```
+
+## Greita patikra, kai kodas neveikia
+
+1. Ar visi `()` uždaryti?
+2. Ar visi `{}` uždaryti?
+3. Ar string turi abi kabutes?
+4. Ar kintamojo vardas visur parašytas vienodai?
+5. Ar metodas parašytas be typo? Pvz. `toUpperCase()`.

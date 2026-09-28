@@ -1,53 +1,85 @@
-# Įvestis ir išvestis
-
-#js #input #output
+# 07 – Įvestis ir išvestis
 
 ## `console.log()`
-Patogiausias mokantis.
+
+Dažniausias mokymosi metu naudojamas būdas pamatyti rezultatą.
 
 ```js
-console.log("Labas");
+let age = 28;
+
+console.log(age);
 ```
 
 ## `alert()`
-Parodo iššokantį langą naršyklėje.
+
+Naršyklėje parodo pranešimą:
 
 ```js
-alert("Labas");
+alert("Labas!");
 ```
 
+Node.js terminale `alert()` neveikia.
+
 ## `prompt()`
-Paklausia vartotojo ir grąžina tekstą.
+
+Naršyklėje gali paprašyti vartotojo įvesti reikšmę:
 
 ```js
 let name = prompt("Koks tavo vardas?");
 ```
 
-Svarbu: `prompt()` dažniausiai grąžina **String**.
+`prompt()` paprastai grąžina **string**.
 
-Jei reikia skaičiaus:
+Jeigu reikia skaičiaus:
 
 ```js
 let age = Number(prompt("Kiek tau metų?"));
 ```
 
-## `confirm()`
-Parodo OK / Cancel.
+## Kodėl svarbus duomenų tipas?
 
 ```js
-let answer = confirm("Ar tęsti?");
+let a = "5";
+let b = "2";
+
+console.log(a + b); // "52"
 ```
 
-Gauna:
-- `true`, jei OK;
-- `false`, jei Cancel.
-
-## Išvedimas į HTML
+Jei konvertuojame:
 
 ```js
-document.getElementById("result").innerHTML = "Labas";
+let a = Number("5");
+let b = Number("2");
+
+console.log(a + b); // 7
 ```
 
-Susiję:
-- [[04_DUOMENU_TIPAI]]
-- [[08_IF_ELSE]]
+## Mokantis per Node
+
+Dažniausiai užtenka:
+
+```js
+console.log(...)
+```
+
+Paleidimas:
+
+```powershell
+node failas.js
+```
+
+## Dažna klaida
+
+Jei terminale esi kitame folderyje, Node failo neras.
+
+Pirma:
+
+```powershell
+cd "kelias\ikiolderio"
+```
+
+tada:
+
+```powershell
+node failas.js
+```

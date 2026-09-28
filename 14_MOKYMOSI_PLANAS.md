@@ -1,62 +1,99 @@
-# Mokymosi planas
+# 14 – Mokymosi planas
 
-#js #mokymasis
+## 1 etapas – bazė
 
-## 1 etapas — bazė
-Turi mokėti be pagalbos:
-- `let` ir `const`;
-- Number, String, Boolean;
-- `console.log()`;
-- paprasti matematiniai veiksmai.
+Turi mokėti be didelio galvojimo:
 
-Temos:
-- [[03_KINTAMIEJI]]
-- [[04_DUOMENU_TIPAI]]
-- [[06_OPERATORIAI]]
+- `let`, `const`;
+- `number`, `string`, `boolean`;
+- `console.log`;
+- `if / else`;
+- funkcija + `return`.
 
-## 2 etapas — sąlygos
+## 2 etapas – kartojimas
+
 Turi suprasti:
-- `if`;
-- `else`;
-- `else if`;
-- `switch`.
 
-Temos:
-- [[08_IF_ELSE]]
-- [[09_SWITCH_TRUTHY_FALSY]]
-
-## 3 etapas — funkcijos
-Turi suprasti:
-- kas yra funkcija;
-- kaip ją iškviesti;
-- parametrai;
-- `return`;
-- arrow function pagrindai.
-
-Tema:
-- [[10_FUNKCIJOS]]
-
-## 4 etapas — ciklai
-Pirmiausia išmok:
 - `for`;
-- `while`.
-
-Tada:
+- `while`;
 - `for...of`;
-- `for...in`;
-- `break`;
-- `continue`.
+- indeksą;
+- `.length`.
 
-Tema:
-- [[11_CIKLAI]]
+## 3 etapas – masyvai
 
-## Kaip mokytis vieną temą
-1. Perskaityk vieną lapą.
-2. Perrašyk pavyzdį ranka.
-3. Pakeisk reikšmes.
-4. Nuspėk rezultatą prieš paleisdamas.
-5. Sukurk vieną savo mini pavyzdį.
-6. Jei suklydai — įrašyk į [[15_MANO_KLAIDOS]].
+Praktikuoti:
 
-## Svarbi taisyklė
-Jei kažko nesupranti, nešok į kitą temą vien dėl to, kad paskaita juda toliau.
+```js
+push()
+pop()
+shift()
+unshift()
+slice()
+splice()
+filter()
+map()
+find()
+sort()
+reduce()
+```
+
+Nereikia visų mokėti atmintinai iškart. Svarbiausia suprasti, **ką jie daro**.
+
+## 4 etapas – tekstai
+
+Praktikuoti:
+
+```js
+split()
+join()
+replace()
+replaceAll()
+slice()
+substring()
+includes()
+trim()
+toUpperCase()
+toLowerCase()
+```
+
+## Kaip spręsti užduotį
+
+Prieš rašydamas kodą parašyk sau:
+
+```text
+INPUT:
+ką gaunu?
+
+OUTPUT:
+ką turiu grąžinti?
+
+VEIKSMAI:
+ką turiu su duomenimis padaryti?
+```
+
+Pvz.:
+
+```text
+INPUT: string
+OUTPUT: skaičius
+VEIKSMAI: pereiti per simbolius ir suskaičiuoti ne tarpus
+```
+
+Tada jau matosi:
+
+```text
+pereiti → for...of
+patikrinti → if
+skaičiuoti → count++
+grąžinti → return
+```
+
+## Mokantis su pavyzdžiu
+
+Jei žiūri į sprendimą:
+1. persirašyk ranka;
+2. paleisk;
+3. pakeisk testinius duomenis;
+4. pabandyk paaiškinti kiekvieną eilutę;
+5. kitą dieną pabandyk atkurti be žiūrėjimo.

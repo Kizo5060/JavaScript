@@ -1,650 +1,272 @@
-# JavaScript Strings
+# 21 pamoka – JavaScript Strings
 
-## Nauja eilutė tekste
-
-Kai naudojame paprastas kabutes `" "` arba `' '`, naujai eilutei galime naudoti:
+String = tekstas.
 
 ```js
-\n
+let text = "Labas";
 ```
 
-Pvz.:
-
-```js
-let guestList = "Guests:\n * John\n * Pete\n * Mary";
-
-console.log(guestList);
-```
-
-Rezultatas:
-
-```text
-Guests:
- * John
- * Pete
- * Mary
-```
-
-## Specialūs simboliai
-
-Dažniausiai naudojami:
+## Nauja eilutė ir specialūs simboliai
 
 ```text
 \n   nauja eilutė
-\r   carriage return
-\"   dviguba kabutė
-\'   vienguba kabutė
-\\   backslash
 \t   tab
-```
-
-Svarbiausia:
-
-```text
-\n = nauja eilutė
-\t = tab
-\\ = \
-```
-
----
-
-## Kabutės teksto viduje – escape
-
-Jeigu tekstą rašome su viengubomis kabutėmis, bet pačiame tekste irgi reikia `'`, prieš ją rašome `\`.
-
-```js
-alert('I\'m the Walrus!');
-```
-
-Rezultatas:
-
-```text
-I'm the Walrus!
-```
-
-Tas `\` reiškia, kad kabutė nėra string pabaiga, o yra teksto dalis.
-
-Pvz. su dvigubomis kabutėmis:
-
-```js
-let text = "He said: \"Hello\"";
-```
-
----
-
-## Backticks `` ` ` ``
-
-Su backticks galima tekstą rašyti per kelias eilutes be `\n`.
-
-```js
-let str2 = `Hello
-World`;
-```
-
-Rezultatas:
-
-```text
-Hello
-World
-```
-
-Jei stringą rašome su backticks, paprastų `' '` ar `" "` kabučių dažniausiai escape'inti nereikia.
-
-```js
-alert(`I'm the Walrus!`);
-```
-
-Trumpai:
-
-```text
-' ' arba " "  → naujai eilutei dažnai reikia \n
-` `            → galima rašyti per kelias eilutes tiesiogiai
-```
-
----
-
-## String ilgis – `.length`
-
-Norint sužinoti, kiek simbolių yra tekste, naudojame `.length`.
-
-```js
-"use strict";
-
-let str = "My name";
-
-console.log(str.length);
-```
-
-Rezultatas:
-
-```text
-7
-```
-
-Tarpas irgi skaičiuojamas kaip simbolis.
-
-Trumpai:
-
-```js
-string.length
-```
-
-grąžina teksto simbolių kiekį.
-
----
-
-## String simbolių indeksai
-
-Kiekvienas string simbolis turi savo indeksą.
-
-Svarbu: indeksas prasideda nuo `0`.
-
-```js
-let text = "Javascript";
-```
-
-Indeksai:
-
-```text
-J a v a s c r i p t
-0 1 2 3 4 5 6 7 8 9
+\\   backslash
+\'   vienguba kabutė
+\"   dviguba kabutė
 ```
 
 Pvz.:
 
 ```js
-console.log(text[0]);
+let text = "Labas\nPasauli";
 ```
 
-grąžins:
+## Escape
+
+Jeigu string aprašytas viengubomis kabutėmis ir tekste reikia `'`:
+
+```js
+let text = 'I\'m here';
+```
+
+## Backticks
+
+```js
+let text = `Hello
+World`;
+```
+
+Backticks leidžia tekstą rašyti per kelias eilutes.
+
+Taip pat galima įterpti reikšmę:
+
+```js
+let name = "Jonas";
+
+let text = `Labas, ${name}`;
+```
+
+## `.length`
+
+```js
+let text = "My name";
+
+console.log(text.length); // 7
+```
+
+Tarpas irgi yra simbolis.
+
+## Indeksai
 
 ```text
-J
+H e l l o
+0 1 2 3 4
 ```
-
-O:
 
 ```js
-console.log(text[4]);
-```
+let text = "Hello";
 
-grąžins:
-
-```text
-s
-```
-
-Trumpai:
-
-```text
-position = žmogui įprastas skaičiavimas nuo 1
-index    = JavaScript skaičiuoja nuo 0
-```
-
----
-
-## String simbolio paėmimas pagal indeksą
-
-Turime:
-
-```js
-let str = "Hello";
-```
-
-Pirmą simbolį galima paimti dviem būdais:
-
-```js
-console.log(str[0]);
-```
-
-arba:
-
-```js
-console.log(str.charAt(0));
-```
-
-Abu grąžins:
-
-```text
-H
-```
-
-### Paskutinis simbolis
-
-```js
-console.log(str[str.length - 1]);
-```
-
-grąžins:
-
-```text
-o
-```
-
-Trumpai:
-
-```js
-str[0]              // pirmas simbolis
-str.charAt(0)       // pirmas simbolis
-str[str.length - 1] // paskutinis simbolis
-```
-
----
-
-## String yra nekeičiamas (`immutable`)
-
-JavaScript stringo simbolio negalima pakeisti tiesiogiai pagal indeksą.
-
-Negalima:
-
-```js
-let str = "Hi";
-
-str[0] = "h";
-```
-
-Reikia sukurti naują stringą:
-
-```js
-let str = "Hi";
-
-str = "h" + str[1];
-
-console.log(str);
-```
-
-Rezultatas:
-
-```text
-hi
-```
-
-Trumpai:
-
-```text
-String = immutable
-```
-
-Tai reiškia, kad pats stringas nekeičiamas vietoje.
-
----
-
-# Dažniausiai naudojami String metodai
-
-## `charAt()`
-
-`charAt()` grąžina simbolį pagal nurodytą indeksą.
-
-```js
-let text = "HELLO WORLD";
-
-let letter = text.charAt(1);
-
-console.log(letter);
-```
-
-Rezultatas:
-
-```text
-E
+text[0]; // H
+text[1]; // e
 ```
 
 Paskutinis simbolis:
 
 ```js
-let letter = text.charAt(text.length - 1);
+text[text.length - 1];
 ```
 
----
+## `charAt()`
+
+```js
+text.charAt(0);
+```
+
+Taip pat paima simbolį pagal indeksą.
+
+## String yra immutable
+
+Negalime tiesiog pakeisti vieno simbolio:
+
+```js
+let text = "Hi";
+
+// text[0] = "h"; // taip neveikia kaip tikimės
+```
+
+Kuriame naują string:
+
+```js
+text = "h" + text[1];
+```
+
+# String metodai
 
 ## `concat()`
 
-`concat()` sujungia du ar daugiau tekstų.
+Sujungia:
 
 ```js
-let text1 = "Hello";
-let text2 = "world!";
+let a = "Hello";
+let b = "world";
 
-let result = text1.concat(" ", text2);
-
-console.log(result);
+let result = a.concat(" ", b);
 ```
 
-Rezultatas:
+## `replace()`
 
-```text
-Hello world!
-```
-
-Galima ir taip:
+Pakeičia pirmą atitikimą:
 
 ```js
-let result = text1 + " " + text2;
+"abc abc".replace("abc", "xyz");
 ```
 
----
+## `replaceAll()`
 
-## `replace()` ir `replaceAll()`
-
-### `replace()`
-
-Pakeičia pirmą rastą teksto dalį.
+Pakeičia visus:
 
 ```js
-let text = "Visit Microsoft!";
-
-let result = text.replace("Microsoft", "W3Schools");
-
-console.log(result);
+"abc abc".replaceAll("abc", "xyz");
 ```
 
-Rezultatas:
-
-```text
-Visit W3Schools!
-```
-
-### `replaceAll()`
-
-Pakeičia visus sutapimus.
+Labai naudinga tarpams pašalinti:
 
 ```js
-let result = "1 abc 2 abc 3".replaceAll("abc", "xyz");
-
-console.log(result);
+text.replaceAll(" ", "");
 ```
-
-Rezultatas:
-
-```text
-1 xyz 2 xyz 3
-```
-
-Trumpai:
-
-```text
-replace()    → pakeičia pirmą rastą tekstą
-replaceAll() → pakeičia visus rastus sutapimus
-```
-
----
 
 ## `split()`
 
-`split()` naudojamas tekstą suskaidyti į masyvą.
+String → array.
 
 ```js
-const greeting = "What a beautiful world";
+let text = "Hello world";
 
-const arr = greeting.split(" ");
-
-console.log(arr);
+let words = text.split(" ");
 ```
 
 Rezultatas:
 
 ```js
-["What", "a", "beautiful", "world"]
+["Hello", "world"]
 ```
 
-`split(" ")` reiškia, kad tekstą skaidome per tarpus.
-
-Jeigu naudojame tuščią stringą:
+Simboliais:
 
 ```js
-const arr = greeting.split("");
+text.split("");
 ```
 
-tekstą suskaidys į atskirus simbolius.
+## `join()`
 
-Trumpai:
-
-```text
-split(" ") → padalina tekstą į žodžius
-split("")  → padalina tekstą į simbolius
-```
-
-Svarbu: `split()` rezultatas yra array, ne string.
-
----
-
-## `split()` + `join()`
-
-Dažnai `split()` naudojamas kartu su `join()`.
+Array → string.
 
 ```js
-const sentence = "Hello world this is JavaScript";
+let words = ["Hello", "world"];
 
-const words = sentence.split(" ");
-
-console.log(words);
-```
-
-Rezultatas:
-
-```js
-["Hello", "world", "this", "is", "JavaScript"]
-```
-
-Tada masyvą galima sujungti atgal į tekstą:
-
-```js
-const dashed = words.join("-");
-
-console.log(dashed);
+words.join("-");
 ```
 
 Rezultatas:
 
 ```text
-Hello-world-this-is-JavaScript
+Hello-world
 ```
-
-Trumpai:
-
-```text
-string
-↓ split(" ")
-array
-↓ join("-")
-string
-```
-
----
 
 ## `substring()` ir `slice()`
 
-Abu metodai paima dalį teksto tarp nurodytų indeksų.
-
-### `substring()`
+Paima teksto dalį:
 
 ```js
-const message = "JavaScript is fun.";
+let text = "JavaScript";
 
-let result = message.substring(0, 10);
-
-console.log(result);
+text.slice(0, 4); // Java
 ```
 
-Rezultatas:
-
-```text
-JavaScript
-```
-
-### `slice()`
-
-```js
-const str = "JavaScript is a very absurd programming language.";
-
-console.log(str.slice(28));
-```
-
-Jei nurodome abu indeksus:
-
-```js
-console.log(str.slice(4, 15));
-```
-
-paimama teksto dalis nuo `4` iki `15` indekso.
-
-Svarbu: galinis `end` indeksas neįtraukiamas.
-
----
+Galinis indeksas neįtraukiamas.
 
 ## `toLowerCase()`
 
-Paverčia tekstą mažosiomis raidėmis.
-
 ```js
-"LABAS".toLowerCase();
+"LABAS".toLowerCase(); // labas
 ```
-
-Rezultatas:
-
-```text
-labas
-```
-
----
 
 ## `toUpperCase()`
 
-Paverčia tekstą didžiosiomis raidėmis.
-
 ```js
-"labas".toUpperCase();
+"labas".toUpperCase(); // LABAS
 ```
-
-Rezultatas:
-
-```text
-LABAS
-```
-
----
 
 ## `trim()`
 
-Pašalina tarpus nuo stringo pradžios ir galo.
+Nuima tarpus nuo pradžios ir galo:
 
 ```js
-let text = "   Labas   ";
-
-console.log(text.trim());
+"   Labas   ".trim();
 ```
-
-Rezultatas:
-
-```text
-Labas
-```
-
----
 
 ## `includes()`
 
-`includes()` patikrina, ar nurodytas tekstas yra kito teksto dalis.
-
-Grąžina:
-
-```text
-true
-```
-
-arba:
-
-```text
-false
-```
-
-Pvz.:
+Patikrina, ar tekstas yra viduje:
 
 ```js
-let sentence = "Java is to JavaScript what Car is to Carpet.";
-
-let check = sentence.includes("Java");
-
-console.log(check);
+"JavaScript".includes("Script"); // true
 ```
 
-Rezultatas:
-
-```text
-true
-```
-
-`includes()` skiria didžiąsias ir mažąsias raides.
-
-```js
-let check = sentence.includes("java");
-```
-
-Rezultatas:
-
-```text
-false
-```
-
-Galima nurodyti, nuo kurio indekso pradėti ieškoti:
-
-```js
-let check = sentence.includes("Java", 20);
-```
-
-Trumpai:
-
-```js
-text.includes("žodis")
-```
-
-patikrina, ar toks tekstas egzistuoja.
-
----
+Skiria didžiąsias ir mažąsias raides.
 
 ## `search()`
 
-`search()` ieško atitikimo tekste ir grąžina pirmo rasto atitikimo indeksą.
-
-Jeigu nieko neranda:
-
-```text
--1
-```
-
-Pvz. su regex:
+Grąžina pirmo atitikimo indeksą arba `-1`.
 
 ```js
-let string1 = "JavaScript JavaScript1";
-
-let regExp = /(JavaScript)\d/;
-
-let index = string1.search(regExp);
-
-console.log(index);
+"JavaScript".search("Script"); // 4
 ```
 
-Regex:
+# Kaip spręsti string užduotis?
+
+## 1. Pašalinti tarpus
 
 ```js
-/(JavaScript)\d/
+function removeBlanks(text) {
+    return text.replaceAll(" ", "");
+}
 ```
 
-ieško teksto `"JavaScript"`, po kurio eina skaičius.
-
-Trumpai:
+## 2. Eiti per kiekvieną simbolį
 
 ```js
-text.search(...)
+for (let char of text) {
+    console.log(char);
+}
 ```
 
-→ grąžina pirmo atitikimo indeksą
+## 3. Kurti naują tekstą
 
-```text
-nerado → -1
+```js
+let result = "";
+
+for (let char of text) {
+    result += char;
+}
+
+return result;
 ```
 
----
+## 4. Sakinį paversti žodžiais
+
+```js
+let words = text.split(" ");
+```
+
+Tada galima:
+
+```js
+for (let word of words) {
+    console.log(word);
+}
+```
 
 # Greita atmintinė
 
@@ -652,16 +274,16 @@ nerado → -1
 .length         simbolių kiekis
 [index]         simbolis pagal indeksą
 charAt()        simbolis pagal indeksą
-concat()        sujungia tekstus
-replace()       pakeičia pirmą atitikimą
-replaceAll()    pakeičia visus atitikimus
+concat()        sujungia
+replace()       pakeičia pirmą
+replaceAll()    pakeičia visus
 split()         string → array
 join()          array → string
-substring()     paima teksto dalį
-slice()         paima teksto dalį
-toLowerCase()   mažosios raidės
-toUpperCase()   didžiosios raidės
-trim()          pašalina tarpus pradžioje ir gale
-includes()      patikrina, ar tekstas yra viduje
-search()        randa pirmo atitikimo indeksą
+slice()         teksto dalis
+substring()     teksto dalis
+toLowerCase()   mažosios
+toUpperCase()   didžiosios
+trim()          nuima tarpus iš kraštų
+includes()      true / false
+search()        pirmo atitikimo indeksas
 ```

@@ -1,142 +1,78 @@
-# 18_NAUDINGI_WEB
+# 18 – Naudingi web šaltiniai
 
-#js #naudingiweb #mokymasis
+Kurso skaidrėse pateikiamos nuorodos į papildomą medžiagą. Mokantis svarbiausia ne atsidaryti 20 puslapių, o turėti kelis patikimus šaltinius.
 
-Šitas puslapis skirtas greitai rasti naudingas JavaScript nuorodas, kai reikia pasitikrinti sintaksę, metodus ar pavyzdžius.
+## MDN Web Docs
 
----
+Ieškant metodo ar sintaksės dažnai naudinga ieškoti:
 
-## W3Schools – JavaScript Array Reference
-
-Naudinga greitai pasitikrinti masyvų metodus ir jų sintaksę.
-
-https://www.w3schools.com/js/js_array_reference.asp
-
-Dažniausiai naudingi metodai:
-
-- `push()` – prideda elementą į masyvo galą
-- `pop()` – pašalina paskutinį masyvo elementą
-- `shift()` – pašalina pirmą masyvo elementą
-- `unshift()` – prideda elementą į masyvo pradžią
-- `splice()` – ištrina, įterpia arba pakeičia elementus
-- `slice()` – nukopijuoja masyvo dalį į naują masyvą
-- `map()` – transformuoja kiekvieną elementą ir sukuria naują masyvą
-- `forEach()` – atlieka veiksmą su kiekvienu elementu
-- `filter()` – sukuria naują masyvą su elementais, kurie atitinka sąlygą
-- `find()` – suranda pirmą tinkantį elementą
-- `findIndex()` – suranda pirmo tinkamo elemento indeksą
-- `includes()` – patikrina, ar masyve yra reikšmė
-- `indexOf()` – suranda elemento indeksą
-- `join()` – sujungia masyvo elementus į tekstą
-- `concat()` – sujungia kelis masyvus
-- `fill()` – užpildo masyvą nurodyta reikšme
-- `every()` – patikrina, ar visi elementai atitinka sąlygą
-- `some()` – patikrina, ar bent vienas elementas atitinka sąlygą
-- `at()` – paima elementą pagal indeksą
-
----
-
-## W3Schools – JavaScript
-
-Bendra JavaScript mokymosi ir greito pasitikrinimo vieta.
-
-https://www.w3schools.com/js/
-
-Naudinga temoms:
-
-- kintamieji
-- `if / else`
-- `switch`
-- funkcijos
-- ciklai
-- masyvai
-- objektai
-- string metodai
-- skaičių metodai
-- DOM
-
----
-
-## MDN Web Docs – JavaScript
-
-Detalesnė JavaScript dokumentacija.
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
-
-Naudoti tada, kai W3Schools paaiškinimo neužtenka arba reikia tikslesnio metodo aprašymo.
-
-### MDN Array
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-
----
-
-## JavaScript.info
-
-Gera vieta mokytis JavaScript temomis ir su išsamesniais paaiškinimais.
-
-https://javascript.info/
-
-Naudinga, kai reikia ne tik sintaksės, bet ir suprasti, kodėl kodas veikia taip, kaip veikia.
-
----
-
-## Node.js
-
-Oficiali Node.js svetainė.
-
-https://nodejs.org/
-
-Naudinga:
-
-- Node.js atsisiuntimui
-- versijos informacijai
-- dokumentacijai
-
-Terminale Node versiją galima patikrinti:
-
-```powershell
-node --version
+```text
+MDN JavaScript <tema>
 ```
 
----
+Pvz.:
 
-## Can I use
+```text
+MDN Array filter
+MDN String split
+MDN Date
+```
 
-Parodo, ar naršyklės palaiko tam tikras JavaScript, HTML ar CSS funkcijas.
+## W3Schools
 
-https://caniuse.com/
+Patogu greitai pažiūrėti paprastus pavyzdžius.
 
-Naudinga vėliau, kai bus daugiau darbo su web puslapiais.
+Ieškok:
 
----
+```text
+W3Schools JavaScript arrays
+W3Schools JavaScript comparisons
+```
 
-## GitHub
+## Moment.js
 
-Naudinga savo užrašams, kodui ir backup.
+Kurso datos temoje naudojama Moment.js biblioteka.
 
-https://github.com/
+Dokumentacija:
 
-Mano JavaScript užrašai:
+```text
+momentjs.com/docs
+```
 
-https://github.com/Kizo5060/JavaScript
+## Kaip ieškoti klaidos
 
----
+Jei Node išmeta klaidą, svarbiausia jos pirmos eilutės.
 
-## Greita tvarka
+Pvz.:
 
-Kai reikia kažką pasitikrinti:
+```text
+TypeError: something is not a function
+```
 
-1. Pirmiausia – **W3Schools**
-2. Jei neaišku – **JavaScript.info**
-3. Jei reikia tikslios dokumentacijos – **MDN**
-4. Jei problema su Node – **Node.js docs**
+Tada ieškok:
+- ar metodo vardas teisingas;
+- ar reikšmės tipas tinkamas.
 
----
+Pvz.:
 
-## Susiję užrašai
+```js
+word[0].toUoerCase()
+```
 
-- [[17_MASYVAI]]
-- [[13_GREITA_ATMINTINE]]
-- [[15_MANO_KLAIDOS]]
-- [[00_START_CIA]]
+duos klaidą, nes metodo pavadinimas neteisingas.
+
+## Geras paieškos principas
+
+Ne:
+
+```text
+kodėl neveikia mano javascript
+```
+
+O:
+
+```text
+JavaScript TypeError toUpperCase is not a function
+```
+
+Kuo konkretesnė klaida, tuo geresni atsakymai.

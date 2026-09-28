@@ -1,26 +1,113 @@
-# Grafo žemėlapis
+# 16 – JavaScript žemėlapis
 
-#js #map
-
-Šitas puslapis padeda pamatyti, kaip temos susijusios.
-
-```mermaid
-graph TD
-    A[JS įvadas] --> B[Sintaksė]
-    B --> C[Kintamieji]
-    C --> D[Duomenų tipai]
-    D --> E[Masyvai ir objektai]
-    C --> F[Operatoriai]
-    F --> G[IF ELSE]
-    G --> H[Switch]
-    G --> I[Funkcijos]
-    I --> J[Ciklai]
-    E --> J
-    I --> K[Metodai]
-    E --> K
+```text
+JavaScript
+│
+├── Kintamieji
+│   ├── let
+│   ├── const
+│   └── var
+│
+├── Duomenų tipai
+│   ├── number
+│   ├── string
+│   ├── boolean
+│   ├── null
+│   ├── undefined
+│   ├── array
+│   └── object
+│
+├── Operatoriai
+│   ├── + - * / %
+│   ├── === !==
+│   ├── > < >= <=
+│   └── && || !
+│
+├── Sąlygos
+│   ├── if
+│   ├── else if
+│   ├── else
+│   └── switch
+│
+├── Funkcijos
+│   ├── parameters
+│   ├── arguments
+│   ├── return
+│   ├── arrow
+│   └── callback
+│
+├── Ciklai
+│   ├── for
+│   ├── while
+│   ├── do...while
+│   ├── for...of
+│   └── for...in
+│
+├── Masyvai
+│   ├── index
+│   ├── length
+│   ├── push/pop
+│   ├── shift/unshift
+│   ├── slice/splice
+│   ├── map/filter/find
+│   ├── sort
+│   └── reduce
+│
+├── Datos
+│   ├── new Date()
+│   ├── timestamp
+│   ├── get...
+│   └── set...
+│
+└── Strings
+    ├── length
+    ├── index
+    ├── split/join
+    ├── slice/substring
+    ├── replace
+    ├── includes
+    └── upper/lower case
 ```
 
-Obsidian Graph View ryšius sukurs automatiškai iš `[[vidinių nuorodų]]`.
+## Kaip viskas susijungia užduotyse
 
-Grįžti:
-- [[00_START_CIA]]
+Dažnas taskas:
+
+```text
+FUNKCIJA
+   ↓
+gauna MASYVĄ arba STRING
+   ↓
+CIKLAS pereina per reikšmes
+   ↓
+IF patikrina sąlygą
+   ↓
+kaupiamas rezultatas
+   ↓
+RETURN grąžina rezultatą
+```
+
+Pvz.:
+
+```js
+function getLongWords(words) {
+    let result = [];
+
+    for (let word of words) {
+        if (word.length >= 5) {
+            result.push(word);
+        }
+    }
+
+    return result;
+}
+```
+
+Čia vienoje užduotyje yra:
+- funkcija;
+- masyvas;
+- ciklas;
+- `if`;
+- string `.length`;
+- `push()`;
+- `return`.
